@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* change this variable to the path of the image or just input the url */
+   background-image: url('./GSZrIiYWsAA1rDb.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    /*
+     change the background color of the body to the background of the image used
+    can get hex of the background using https://imagecolorpicker.com/
+     */
+    background-color: black;
+    /*
+     change the color of the text so that its visible on the page 
+     set to black if site is light, white if site is dark, 
+     if other - yellow or something else more visible
+    */
+    color: white; /* Adjust text color as needed */
+}
+
+
+
+/* responsive config for devices that is smaller than tablet size */
+@media (max-width: 767px) {
+    body {
+        width: 100%;
+        background-size: contain; /* Ensures the image covers the entire background area */
+        background-position: center; /* Centers the image */
+        background-attachment: fixed; /* Ensures the background image is fixed */
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+    .buy,.ca,.chart{
+        position: fixed; 
+        bottom: 0;
+    }
+    .chart{
+        padding-bottom: 100px;
+    }    
+    .buy{
+        padding-bottom: 50px;
+    }
+    .twitter, .telegram, .name{
+        position: fixed;
+        top: 0;
+    }
+    .telegram{
+        padding-top: 50px;
+    }
+    .ca{
+        margin-bottom: 0;
+    }
+    .name{
+        padding-top: 175px;
+    }
+}
+
+/* responsive config for devices tablets and above */
+@media (min-width:768px){ 
+    body {
+        background-attachment: fixed;
+    }
+    .name, .chart, .ca, .buy, .telegram,.twitter{
+        position: fixed;
+    }
+    .name{
+        width: 100%;
+        top: 0;
+        text-align: center;
+        padding-top: 75px;
+    }
+    .ca{
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .chart{
+        top: 0;
+        left: 0;
+    }
+    .buy{
+        top: 0;
+        right: 0;
+    }
+    .twitter{
+        z-index: 20;
+        bottom: 0;
+        left: 0;
+        
+    }
+    .telegram{
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+} 
+/* responsive visuals for iphone 4 devices and older */
+@media (max-width: 400px){ 
+    .name{
+        padding-top: 100px;
+    }
+    .buy{
+        padding-bottom: 25px;
+    }
+    .chart{
+        padding-bottom: 75px;
+    }
+} 
+/* pushes coin title name to the top when site screen is very wide  */
+@media (min-width:1024) {
+ .name{
+    padding-top: 0;
+
+ }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
